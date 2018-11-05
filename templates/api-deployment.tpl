@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: pelias-api
+        canary: false
       annotations:
         checksum/config: {{ include (print $.Template.BasePath "/configmap.tpl") . | sha256sum }}
     spec:
