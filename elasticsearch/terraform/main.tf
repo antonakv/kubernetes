@@ -20,7 +20,7 @@ resource "aws_launch_template" "elasticsearch" {
       volume_size = "${var.elasticsearch_data_volume_size}"
       volume_type = "gp2"
       iops        =  "200"
-      encrypted   = false
+      encrypted   = "false"
     }
   }, {
     device_name = "/dev/sdc"
@@ -28,7 +28,7 @@ resource "aws_launch_template" "elasticsearch" {
       volume_size = "${var.elasticsearch_log_volume_size}"
       volume_type = "gp2"
       iops        =  "200"
-      encrypted   = false
+      encrypted   = "false"
     }
   }]
 
